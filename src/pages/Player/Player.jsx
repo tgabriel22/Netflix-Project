@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Player.css";
 import back_arrow_icon from "../../assets/back_arrow_icon.png";
 import { useNavigate, useParams } from "react-router-dom";
-import { options } from "../../components/apiOptions";
+// import { options } from "../../components/apiOptions";
 
 const Player = () => {
   const { id } = useParams();
@@ -14,14 +14,13 @@ const Player = () => {
     typeof: "",
   });
 
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     accept: "application/json",
-  //     Authorization:
-  //       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYWYzYWYzYjMwODEwMmI0ZjI5NDUxZjM0OTk2NTYwNiIsIm5iZiI6MTcyMzY2MDQ2OS4zMTI0ODQsInN1YiI6IjY2YmNmNjUzZjE5ZWI5OTk1NzgyNjI4OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-23NI5heaIFy2tLSBSeFauooxdJXUSDlkJ5TeQa9zr4",
-  //   },
-  // };
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization: `Bearer ${import.meta.env.VITE_NEW_API_KEY}`,
+    },
+  };
 
   useEffect(() => {
     fetch(

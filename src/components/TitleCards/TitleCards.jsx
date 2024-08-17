@@ -3,7 +3,7 @@ import "./TitleCards.css";
 import cards_data from "../../assets/cards/Cards_data";
 import { Link } from "react-router-dom";
 
-import { options } from "../../components/apiOptions";
+// import { options } from "../../components/apiOptions";
 
 const TitleCards = ({ title, category }) => {
   const [apiData, setApiData] = useState([]);
@@ -11,14 +11,13 @@ const TitleCards = ({ title, category }) => {
   // lef&right scroll wheel mouse
   const cardsRef = useRef();
 
-  // const options = {
-  //   method: "GET",
-  //   headers: {
-  //     accept: "application/json",
-  //     Authorization:
-  //       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYWYzYWYzYjMwODEwMmI0ZjI5NDUxZjM0OTk2NTYwNiIsIm5iZiI6MTcyMzY2MDQ2OS4zMTI0ODQsInN1YiI6IjY2YmNmNjUzZjE5ZWI5OTk1NzgyNjI4OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-23NI5heaIFy2tLSBSeFauooxdJXUSDlkJ5TeQa9zr4",
-  //   },
-  // };
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization: `Bearer ${import.meta.env.VITE_NEW_API_KEY}`,
+    },
+  };
 
   const handleWheel = (event) => {
     event.preventDefault();
