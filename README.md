@@ -17,5 +17,5 @@ Just for React skills improvement purposes, build the Netflix clone using **Reac
 - **Routing**: React Router
 
   
-[View Live Project](https://netflix-project-demo.vercel.app/login)
+[View Live Project](https://netflix-project-demo.vercel.app/)
 
